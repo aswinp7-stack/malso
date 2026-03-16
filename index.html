@@ -344,7 +344,7 @@ function renderWeek() {
   const vc = document.getElementById('vaccCard');
   if (data.vaccine) { vc.style.display='block'; vc.innerHTML='💉 '+data.vaccine; }
   else { vc.style.display='none'; }
-  const vc=document.getElementById('vaccCard'); if(data.vaccine){vc.style.display='block';vc.innerHTML='💉 '+data.vaccine;}else{vc.style.display='none';}
+  const vc=document.getElementById('vaccCard'); if(vc){if(data.vaccine){vc.style.display='block';vc.innerHTML='💉 '+data.vaccine;}else{vc.style.display='none';}}
   document.getElementById('affirmationText').textContent = `"${data.affirmation}"`;
   const pct = Math.round((data.week / 40) * 100);
   document.getElementById('progressFill').style.width = pct + '%';
